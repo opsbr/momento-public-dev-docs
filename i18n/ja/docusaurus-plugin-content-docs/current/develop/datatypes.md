@@ -1,56 +1,60 @@
 ---
-sidebar_position: 2
-sidebar_label: データ型
+sidebar_position: 4
+sidebar_label: Data Types
 sidebar_class_name: sidebar-item-data-types
-title: サポートしているデータ型
+title: Supported data types
 pagination_prev: null
 pagination_next: null
-description: Momento Cache のコアとなるデータ型を学び、現代的なプログラミング言語のに共通する型との対応をみてみましょう。
+description: Learn the core data types in Momento Cache to match up with common types in modern programming languages and information about each.
 ---
 
-# Momento Cache と Momento Topics でサポートしているデータ型
-Momento Cache は、現代的な様々なプログラミング言語に共通する型と対応するコアとなるデータ型を提供しています。このページでは、コアのデータ構造の一覧と、それぞれの情報を紹介しています。
+こんにちは！
 
-![さまざまな種類のデータ型とアイデアが高速で移動するイメージ](../../../../../static/img/more-data-types.jpg)
+# Momento CacheおよびMomento Topicsでサポートされるデータ型
 
-## Momento Cache と Topics のコアデータ型
+Momento Cache は、さまざまなプログラミング言語の一般的な型に対応するコアデータ型を提供します。このページには、核となるデータ型の一覧と、それぞれのデータ型に関する情報があります。
+
+![様々なデータ型とアイデアの高速移動のイメージ](./../../static/img/more-data-types.jpg)
+
+## Momento Cacheのコア・データ型とトピック
 
 ### バイト配列
 
-保存される全てのデータはバイト配列で表現されます。Momento SDK は、生のバイトやUTF-8 の文字列として皆さんのデータを保存するために簡単に使えるメソッドを提供してます。これらは、スカラーデータ (文字列、キャラクタ、数字、等) か、バイナリデータ (画像、Protocol Buffer のシリアライズされた配列) の形になります。
+保存されるデータはすべてバイト配列で表現されます。Momento SDKは、データを生のバイトまたは移植可能なUTF-8文字列として格納するために使用できる簡単な方法を提供します。文字列、文字、数値などのスカラーデータ、画像やProtocol Buffersの直列化配列などのバイナリデータがあります。
 
-### コレクションデータ型 (CDT)
+### コレクション・データ型（CDT）
 
-コレクションデータ型は、関連するデータを一つの項目にグループ化したものです。それらはバイト配列の値として保存され、Momento SDK ではそれぞれに API が提供されています。例えば、DictionaryFetch、ListFetch、SetFetch 等です。
+コレクション・データ型は、関連するデータを1つの項目にまとめたものです。これらはバイト配列の値として格納され、Momento SDKではそれぞれ独自のAPIコールが用意されています。例えば、DictionaryFetch、ListFetch、SetFetchなどです。
 
-![コレクションデータ型 | Momento Cache](/img/collection_data_types.png)
+<img src="/img/collection_data_types.png" alt="Collection data types drawing | Momento Cache" width="80%"/>
 
 #### リスト
 
-リストは順序のある要素の集合で、挿入された順にソートされています。
+リストは、順序付けられた要素のコレクションで、各要素が挿入された順序でソートされます。
 
 ```javascript
 "Hoover’s Sour Cream Cookies" = [
-    "1 cup butter (2 sticks), room temperature",
-    "1 cup granulated sugar",
-    "1 cup brown sugar, packed",
-    "3 eggs, room temperature",
-    "1 cup sour cream, room temperature",
-    "1 tsp pure vanilla extract",
-    "3 cups all-purpose flour",
-    "1 tsp baking powder",
-    "1 tsp baking soda",
-    "1 tsp salt"
+  "1 cup butter (2 sticks), room temperature",
+  "1 cup granulated sugar",
+  "1 cup brown sugar, packed",
+  "3 eggs, room temperature",
+  "1 cup sour cream, room temperature",
+  "1 tsp pure vanilla extract",
+  "3 cups all-purpose flour",
+  "1 tsp baking powder",
+  "1 tsp baking soda",
+  "1 tsp salt"
 ]
 ```
 
-API メソッドは、[リストコレクションデータ型の API リファレンス](./api-reference/list-collections.md)をご覧下さい。
+API メソッドを学ぶには、[リスト・コレクション](./api-reference/list-collections.md)・データ型の API リファレンスを参照してください。
 
 #### 辞書
 
-辞書は順序のない要素の集合で、各要素は field:value の組で表されます。
+辞書は順序付けされていない要素の集まりで、各要素はフィールド:値のペアです。
 
-辞書の使用例としては、 field:value の組を一緒に保存して、名前でそれを取り出したい時です。
+ディクショナリを使用する例としては、データをまとめて保存し、フィールド：値のペアを名前で取り出す必要がある場合などがあります。
+
 ```javascript
 "truck546" = {
     "brand" : "Ford",
@@ -60,11 +64,11 @@ API メソッドは、[リストコレクションデータ型の API リファ�
 }
 ```
 
-API メソッドは、[辞書コレクションデータ型の API リファレンス](./api-reference/dictionary-collections.md)をご覧下さい。
+API メソッドを学ぶには、[辞書](./api-reference/dictionary-collections.md)コレクション・データ型の API リファレンスを参照してください。
 
-#### セット
+#### 集合
 
-セットは順序のないユニークな要素の集合で、各要素は文字列の形になります。例えば、あるセットに何度 'sugar' を追加しても、 'sugar' は一つしか現れません。
+セットは、それぞれが文字列形式の、一意の要素の順序なしコレクションです。たとえば、'sugar'を何度セットに追加しても、'sugar'のエントリは1つしかありません。
 
 ```javascript
 "myIngredients" = {
@@ -77,11 +81,11 @@ API メソッドは、[辞書コレクションデータ型の API リファレ�
 }
 ```
 
-API メソッドは、[セットコレクションデータ型の API リファレンス](./api-reference/set-collections.md)をご覧下さい。
+API メソッドを学ぶには、[集合](./api-reference/set-collections.md)コレクション・データ型の API リファレンスを参照してください。
 
-#### ソート済セット
+#### ソートされた集合
 
-ソート済セットは値(文字列)とスコア(64ビット符号付き浮動小数点数)の組で表されるユニークな要素の集合です。項目内の要素はスコアの値でソートされています。例:
+ソートされた集合は、値 (string) とスコア (signed double 64-bit float) のペアを持つ一意な要素の集まりです。項目の要素はスコア値順に並べられます。例えば
 
 ```javascript
 "players" = {
@@ -96,31 +100,32 @@ API メソッドは、[セットコレクションデータ型の API リファ�
 }
 ```
 
-:::note
+:::ノート
 
-もし要素が同じスコアの場合、[辞書的に](https://www.dictionary.com/browse/lexicographically)ソートされます。
+要素が同じスコアを持つ場合、それらは[辞書順に](https://www.dictionary.com/browse/lexicographically)並べ替えられます。
 
 :::
 
-API メソッドは [ソート済セットコレクションデータ型の API リファレンス](./api-reference/sorted-set-collections.md)をご覧下さい。
+API メソッドを学ぶには、[並べ替えセット・コレクション](./api-reference/sorted-set-collections.md)・データ型の API リファレンスを参照してください。
 
-## FAQs
+## よくある質問
+
 <details>
-  <summary>辞書型の項目からデータの部分集合を取り出す API 呼出しをした場合、項目全体のサイズが GB 毎の転送コストに計上されますか？</summary>
-いいえ、されません。例えば、もし全体で 50 KB ある辞書型の項目から、DictionaryGetField API 呼出しで 5 KB の field:value 組のデータを1つ取り出した場合、5 KB だけが GB 毎の転送コストに計上されます。
+ <summary>辞書項目からデータのサブセットを取得するためにAPIコールを実行した場合、項目全体のサイズはGBあたりの転送コストにカウントされますか?</summary>
+いいえ、カウントされません。たとえば、APIコールDictionaryGetFieldを実行して、ディクショナリ項目全体が50キロバイトであるディクショナリから5キロバイトのフィールド:値のペアを1つ取得する場合、GBあたりの転送コストにカウントされるのは5キロバイトだけです。
 </details>
 
 <details>
-  <summary>どうやれば Momento Cache に JSON ドキュメントを保存できますか？</summary>
-お好みの JSON ライブラリを使って、その JSON ドキュメントをバイト配列にシリアライズし、そのバイト配列を Momento Cache に挿入してください。または、JSON ドキュメントの各フィールドの値を辞書型に保存することもできます。
+ <summary>JSONドキュメントをMomento Cacheに保存するには？</summary>
+お気に入りの JSON ライブラリを使用して JSON ドキュメントをバイト配列にシリアライズし、そのバイト配列を Momento Cache に挿入します。JSON ドキュメントの各フィールド値を辞書に格納することもできます。
 </details>
 
 <details>
-  <summary>Momento Cache はコレクションデータ型でネストされたデータを保存できますか？</summary>
-直接的にはできません。ベストな選択肢としては、そのデータを JSON オブジェクトとして保存することで、お好みの JSON ライブラリを使って JSON ドキュメントをバイト配列にシリアライズしてからそのバイト配列を Momento Cache に挿入できます。
+ <summary>Momento Cacheは、コレクションデータ型にネストされたデータを保存しますか？</summary>
+直接ではありません。このデータを JSON オブジェクトとして保存し、お気に入りの JSON ライブラリを使用して JSON ドキュメントをバイト配列にシリアライズし、そのバイト配列を Momento Cache に挿入するのが最良の方法です。
 </details>
 
 <details>
-  <summary>インクリメント API を使う場合、要素はどのような形式にすればよいですか？</summary>
-インクリメント API で使う要素は、基数 10 の整数を表現する UTF-8 の文字列で保存されている必要があります。もし要素がこの形式になっていない場合、API 呼出しは形式エラーを投げます。
+ <summary>インクリメントAPIを使用する場合、要素はどのようにフォーマットすればよいですか？</summary>
+インクリメントAPIコールで使用する要素は、基数10の整数を表すUTF-8文字列として格納する必要があります。要素がその形式でない場合、APIコールはフォーマットエラーを投げます。
 </details>
