@@ -1,31 +1,35 @@
 ---
 sidebar_position: 1
 sidebar_class_name: sidebar-item-overview
-sidebar_label: Momento キャッシュとトピックス
-title: Momentoキャッシュとトピックスのドキュメント
-description: Learn what you need to know to speed up your cloud application with the world's easiest serverless cache.
+sidebar_label: Momento Cache
+title: Momento Cache Documentation
+description: Learn what you need to know to speed up your cloud application with the world's first serverless cache.
 pagination_next: null
 ---
 
-<head>
-  <meta name="google-site-verification" content="jXAJxglm5PRXRtL0R8kfGf80Xs1WM3IVAwAUPJC23lI" />
-</head>
+こんにちは！
 
-Momento キャッシュは世界で初めての本物のサーバーレスキャッシュサービスです。即時の弾力性、スケールをゼロにもでき、そして恐ろしく高速なパフォーマンスを発揮します。もはや、キャパシティを選択、管理してプロビジョンする必要はなくなりました。Momento キャッシュなら、SDK を入れて、エンドポイントを取得し、数行のコードを追加すれば、もう動き始めます。
+# Momento Cacheとは何ですか？
 
-Momento キャッシュと[Momento トピックス](./../topics/index.md) は次のクラウドプロバイダーとリージョンで利用可能です：
+Momento Cacheは世界初の真にサーバーレスなキャッシュサービスです。瞬時の弾力性、スケール・トゥ・ゼロ機能、圧倒的な高速パフォーマンスを提供します。容量の選択、管理、プロビジョニングが必要な時代は終わりました。Momento Cacheを使えば、SDKを入手し、エンドポイントを取得し、コードに数行入力するだけで、すぐに使い始めることができる。
 
-**AWSのリージョン**: us-west-2, us-east-1, eu-west-1, ap-south-1, ap-northeast-1
+<img src="/img/dial.jpg" width="90%" alt="a technical illustration on a white background depicting the intersection of speed, ease of use, and security."/>
 
-**GCPのリージョン**: us-central1
+Momento Cacheは以下のクラウドプロバイダーとリージョンで利用できます：
 
-## キャッシュとは何か、MomentoキャッシュそしてMomentoトピックスについて学ぶ
+**AWSリー**ジョン: US-West-2、US-East-1、EU-West-1、AP-South-1、AP-Northeast-1
 
-この後のページでは、一般的にキャッシュとは何なのか、そして特に Momento キャッシュをどうやって使うのか、を学ぶことができます。
+**GCPリージョン**: us-central1
 
-- MomentoをSDKの例を使ってすぐに試して動かしてみたい方は、[まずはじめに](./getting-started.md)をご覧下さい。
+ご希望のプロバイダやリージョンがリストにない場合は、[お問い合わせ](mailto:support@momentohq.com)ください。
 
-- オープンソースの SDK をお探しの方は、[GitHub](https://github.com/momentohq)をご覧下さい:
+## キャッシュとMomento Cacheについて学ぶ
+
+以下のページでは、一般的なキャッシュと、Momento Cache の使用方法について説明します。
+
+- _Momento Cacheを使用したSDKのサンプルを素早く立ち上げたい_場合は、[Getting Startedを](./getting-started.md)ご覧ください。
+
+- _オープンソースの SDK_ をお探しの場合は、こちらをご覧ください：
 
   - [Node.js](./cache/develop/sdks/nodejs)
   - [JavaScript Web SDK](./cache/develop/sdks/web)
@@ -38,10 +42,10 @@ Momento キャッシュと[Momento トピックス](./../topics/index.md) は次
   - [Ruby](./cache/develop/sdks/ruby)
   - [Elixir](./cache/develop/sdks/elixir)
 
-- Momento キャッシュについてもっと詳しく、どの様に動作するのかを知りたい方は、のセクション、特に[Momento キャッシュの概念](./learn/how-it-works/index.mdx)に関する部分をご覧下さい。
+- _Momento Cacheの詳細や仕組み_については、[Momento Cacheのコンセプトに関する](./learn/how-it-works/index.mdx)リファレンスを参照してください。
 
-- AWS Lambda や他のシステムとの具体的な連携ガイドについては、[ガイド](./develop/guides/1-caching-with-aws-lambda.md)のセクションをご覧下さい。
+- _AWS Lambda や他のシステムとの統合に関する具体的なガイドについては_、[ガイド](./develop/guides/1-caching-with-aws-lambda.md)セクションを参照してください。
 
-- アーキテクチャダイアグラム用にMomentoアイコンをお探しですか？ [Momento_Architecture_Icons.zip](@site/static/img/icons/Momento_Architecture_Icons.zip)をダウンロードしてください。
+- _アーキテクチャ図用の Momento アイコンをお探しですか？_ [Momento_Architecture_Icons.zip](@site/static/img/icons/Momento_Architecture_Icons.zip) をダウンロードしてください。
 
-ご質問やコメントをお持ちでしょうか？ぜひお聞かせ下さい！[Discord に入って](https://discord.com/invite/3HkAKjUZGq)Momento のスペシャリストとチャットすることもできますし、[support@momentohq.com](mailto:support@momentohq.com) へメールをすることもできます。
+ご質問やコメントはありますか？ぜひご連絡ください！[Discordに](https://discord.com/invite/3HkAKjUZGq)参加してMomentoのスペシャリストとチャットするか、<support@momentohq.com>。
